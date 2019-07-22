@@ -213,9 +213,9 @@
     if (typeof module !== 'undefined' && typeof module.exports != "undefined") {
         module.exports = MQTT;
     } else {
-        if (!window.PodAsync) {
-            window.PodAsync = {};
+        if (!window.POD) {
+            window.POD = {};
         }
-        window.PodAsync.MQTT = MQTT;
+        window.POD.MQTT = MQTT;
     }
 })();

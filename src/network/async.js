@@ -24,10 +24,10 @@
             PodUtility = require('../utility/utility.js');
         }
         else {
-            PodSocketClass = PodAsync.Socket;
-            PodMQTT = PodAsync.MQTT;
-            PodActiveMQ = PodAsync.ActiveMQ;
-            PodUtility = PodAsync.Utility;
+            PodSocketClass = POD.Socket;
+            PodMQTT = POD.MQTT;
+            PodActiveMQ = POD.ActiveMQ;
+            PodUtility = POD.AsyncUtility;
         }
 
         var Utility = new PodUtility();
@@ -857,9 +857,9 @@
         module.exports = Async;
     }
     else {
-        if (!window.PodAsync) {
-            window.PodAsync = {};
+        if (!window.POD) {
+            window.POD = {};
         }
-        window.PodAsync.Async = Async;
+        window.POD.Async = Async;
     }
 })();

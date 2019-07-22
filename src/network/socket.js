@@ -210,10 +210,10 @@
   if (typeof module !== 'undefined' && typeof module.exports != "undefined") {
     module.exports = Socket;
   } else {
-    if (!window.PodAsync) {
-      window.PodAsync = {};
+    if (!window.POD) {
+      window.POD = {};
     }
-    window.PodAsync.Socket = Socket;
+    window.POD.Socket = Socket;
   }
 
 })();

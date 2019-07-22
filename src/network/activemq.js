@@ -197,9 +197,9 @@
     if (typeof module !== 'undefined' && typeof module.exports != "undefined") {
         module.exports = ActiveMQ;
     } else {
-        if (!window.PodAsync) {
-            window.PodAsync = {};
+        if (!window.POD) {
+            window.POD = {};
         }
-        window.PodAsync.ActiveMQ = ActiveMQ;
+        window.POD.ActiveMQ = ActiveMQ;
     }
 })();

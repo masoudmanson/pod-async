@@ -307,9 +307,9 @@
   if (typeof module !== 'undefined' && typeof module.exports != "undefined") {
     module.exports = Utility;
   } else {
-    if (!window.PodAsync) {
-      window.PodAsync = {};
+    if (!window.POD) {
+      window.POD = {};
     }
-    window.PodAsync.Utility = Utility;
+    window.POD.AsyncUtility = Utility;
   }
 })();
