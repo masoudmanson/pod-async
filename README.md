@@ -33,10 +33,17 @@ var params = {
 ```javascript
 var params = {
   protocol: "queue",
-  queueHost: "172.16.0.248",
-  queuePort: "61613",
-  queueUsername: "***",
-  queuePassword: "***",
+  servers: [{
+    serverHost: "192.168.112.23",
+    serverPort: "61613",
+    serverUsername: "root",
+    serverPassword: "****"
+  }, {
+    serverHost: "172.16.0.248",
+    serverPort: "61613",
+    serverUsername: "root",
+    serverPassword: "****"
+  }],
   queueReceive: "queue-in-amjadi-stomp",
   queueSend: "queue-out-amjadi-stomp",
   queueConnectionTimeout: 20000,
