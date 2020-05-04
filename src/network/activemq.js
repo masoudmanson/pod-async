@@ -15,9 +15,9 @@
          *******************************************************/
 
         var eventCallbacks = {
-                "init": {},
-                "error": {}
-            },
+            "init": {},
+            "error": {}
+        },
             client,
             connectionStatus = false;
 
@@ -26,24 +26,30 @@
          *******************************************************/
 
         var init = function () {
-                connect();
-            },
+            connect();
+        },
 
             connect = function () {
                 try {
-                    var server = {
-                        "host": params.host,
-                        "port": params.port,
-                        "timeout": params.timeout || 20000,
-                        "connectHeaders": {
-                            "host": "/",
-                            "login": params.username,
-                            "passcode": params.password,
-                            "heart-beat": "5000, 5000"
-                        }
-                    };
+                    var servers = [];
 
-                    var servers = [server];
+                    if (params.servers && Array.isArray(params.servers)) {
+                        for (var i = 0; i < params.servers.length; i++) {
+                            servers.push(
+                                {
+                                    "host": params.servers[i].serverHost,
+                                    "port": params.servers[i].serverPort,
+                                    "timeout": params.timeout || 20000,
+                                    "connectHeaders": {
+                                        "host": "/",
+                                        "login": params.servers[i].serverUsername,
+                                        "passcode": params.servers[i].serverPassword,
+                                        "heart-beat": "5000, 5000"
+                                    }
+                                }
+                            );
+                        }
+                    }
 
                     var reconnectOptions = {
                         'maxReconnects': 20
@@ -52,6 +58,7 @@
                     var manager = new Stompit.ConnectFailover(servers, reconnectOptions);
 
                     manager.connect(function (error, stompClient, reconnect) {
+
                         if (error) {
                             fireEvent("error", {
                                 errorCode: error.code,

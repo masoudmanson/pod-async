@@ -2,10 +2,17 @@ var Async = require('../src/network/async.js');
 
 var params = {
   protocol: "queue",
-  queueHost: "172.16.0.248",
-  queuePort: "61613",
-  queueUsername: "root",
-  queuePassword: "zalzalak",
+  servers: [{
+    serverHost: "192.168.112.23",
+    serverPort: "61613",
+    serverUsername: "root",
+    serverPassword: "j]Bm0RU8gLhbPUG"
+  }, {
+    serverHost: "172.16.0.248",
+    serverPort: "61613",
+    serverUsername: "root",
+    serverPassword: "zalzalak"
+  }],
   queueReceive: "queue-in-amjadi-stomp",
   queueSend: "queue-out-amjadi-stomp",
   queueConnectionTimeout: 20000,
@@ -24,14 +31,14 @@ var asyncClient = new Async(params);
 /**
  * Write your code here
  */
-asyncClient.on("asyncReady", function() {
+asyncClient.on("asyncReady", function () {
   PID = asyncClient.getPeerId();
 
   /**
    * Send Message Every 5 Seconds
    */
   if (!sendMessageInterval) {
-    sendMessageInterval = setInterval(function() {
+    sendMessageInterval = setInterval(function () {
       asyncClient.send({
         type: 3,
         content: {
@@ -46,24 +53,24 @@ asyncClient.on("asyncReady", function() {
 /**
  * Handle Async Error here
  */
-asyncClient.on("error", function(error) {
+asyncClient.on("error", function (error) {
   console.error(error);
 });
 
 /**
  * You can handle received message here
  */
-asyncClient.on("message", function(msg, ack) {
+asyncClient.on("message", function (msg, ack) {
   // Received Messages
 });
 
 /**
  * You can get async state changes here
  */
-asyncClient.on("stateChange", function(currentState) {
+asyncClient.on("stateChange", function (currentState) {
   // Status
 });
 
-asyncClient.on("disconnect", function(e) {
+asyncClient.on("disconnect", function (e) {
   console.log("Async disconnected! \n", e);
 });
