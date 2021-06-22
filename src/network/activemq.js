@@ -44,7 +44,7 @@
                                         "host": "/",
                                         "login": params.servers[i].serverUsername,
                                         "passcode": params.servers[i].serverPassword,
-                                        "heart-beat": "5000, 5000"
+                                        "heart-beat": "5000,5000"
                                     }
                                 }
                             );

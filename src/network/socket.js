@@ -45,6 +45,8 @@
 
           socket = new WebSocket(address, []);
 
+          socket
+
           socketRealTimeStatusInterval && clearInterval(socketRealTimeStatusInterval);
           socketRealTimeStatusInterval = setInterval(function() {
             switch (socket.readyState) {

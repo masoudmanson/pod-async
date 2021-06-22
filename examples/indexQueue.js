@@ -3,15 +3,15 @@ var Async = require('../src/network/async.js');
 var params = {
   protocol: "queue",
   servers: [{
-    serverHost: "192.168.112.23",
+    serverHost: "***",
     serverPort: "61613",
-    serverUsername: "root",
-    serverPassword: "j]Bm0RU8gLhbPUG"
+    serverUsername: "***",
+    serverPassword: "***"
   }, {
-    serverHost: "172.16.0.248",
+    serverHost: "***",
     serverPort: "61613",
-    serverUsername: "root",
-    serverPassword: "zalzalak"
+    serverUsername: "***",
+    serverPassword: "***"
   }],
   queueReceive: "queue-in-amjadi-stomp",
   queueSend: "queue-out-amjadi-stomp",

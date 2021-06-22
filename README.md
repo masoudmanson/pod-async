@@ -34,18 +34,18 @@ var params = {
 var params = {
   protocol: "queue",
   servers: [{
-    serverHost: "192.168.112.23",
-    serverPort: "61613",
-    serverUsername: "root",
-    serverPassword: "****"
+    serverHost: "***",
+    serverPort: "***",
+    serverUsername: "***",
+    serverPassword: "***"
   }, {
-    serverHost: "172.16.0.248",
-    serverPort: "61613",
-    serverUsername: "root",
-    serverPassword: "****"
+    serverHost: "***",
+    serverPort: "***",
+    serverUsername: "***",
+    serverPassword: "***"
   }],
-  queueReceive: "queue-in-amjadi-stomp",
-  queueSend: "queue-out-amjadi-stomp",
+  queueReceive: "queue-***",
+  queueSend: "queue-***",
   queueConnectionTimeout: 20000,
   asyncLogging: {
     onFunction: true, // log main actions on console
@@ -60,8 +60,8 @@ var params = {
 ```javascript
 var params = {
     protocol: 'mqtt',
-    mqttHost: '172.16.106.26',
-    mqttPort: '1883',
+    mqttHost: '***',
+    mqttPort: '***',
     mqttUsername: '***',
     mqttPassword: '***',
     mqttConnectionTimeout: 20000,
