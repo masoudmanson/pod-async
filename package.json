@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/masoudmanson/pod-async.git"
+    "url": "git+https://github.com/FanapSoft/pod-async-js-sdk.git"
   },
   "keywords": [
     "Fanap",
@@ -23,9 +23,9 @@
   "author": "Masoud Amjadi <masoudmanson@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/masoudmanson/pod-async/issues"
+    "url": "https://github.com/FanapSoft/pod-async-js-sdk/issues"
   },
-  "homepage": "https://github.com/masoudmanson/pod-async#readme",
+  "homepage": "https://github.com/FanapSoft/pod-async-js-sdk#readme",
   "dependencies": {
     "bufferutil": "^4.0.0",
     "isomorphic-ws": "^4.0.1",
